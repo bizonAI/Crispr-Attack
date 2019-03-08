@@ -9,10 +9,12 @@ public class WalkObject : MonoBehaviour
     public Vector3 moveToPos;
     public float camMoveSpeed = 5;
 
+    public GameObject interactionCavas;
+
     [HideInInspector]
     public bool wasHit;
 
-    public GameObject interactionCavas;
+    
 
 
     private void Update()

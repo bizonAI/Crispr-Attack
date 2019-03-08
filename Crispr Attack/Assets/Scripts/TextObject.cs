@@ -9,6 +9,13 @@ public class TextObject : MonoBehaviour
 
     public static bool isInDialog;
 
+    GameObject sceneInfo;
+
+    private void Start()
+    {
+        sceneInfo = GameObject.Find("SceneInfo");
+    }
+
     private void OnMouseDown()
     {
         if (!isInDialog && !dialogManager.GetComponent<Dialog>().finished)
@@ -16,6 +23,9 @@ public class TextObject : MonoBehaviour
             dialogManager.SetActive(true);
             textPanel.SetTrigger("fadeIn");
             isInDialog = true;
+
+            sceneInfo.GetComponent<SceneInfo>().possibleInteractions--;
+            sceneInfo.GetComponent<SceneInfo>().UpdateInteractions();
         }
         
     }

@@ -58,3 +58,12 @@ TagManager:
   - name: Text
     uniqueID: 1292608493
     locked: 0
+  - name: Back
+    uniqueID: 2715237121
+    locked: 0
+  - name: Mid
+    uniqueID: 751961705
+    locked: 0
+  - name: Front
+    uniqueID: 2366623059
+    locked: 0
