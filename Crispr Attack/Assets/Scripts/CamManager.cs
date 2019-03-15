@@ -13,6 +13,11 @@ public class CamManager : MonoBehaviour
 
     bool goBack;
 
+    private void Start()
+    {
+        myCam.transform.position = startPos;
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
